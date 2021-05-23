@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Pia</title>
+</head>
+<body>
+  <h1>Taulukon [11,22,33,44] läpikäyntiä</h1>
+  <p>for- ja for...of-silmukoilla
+    <hr>
+  <p>Alkiot ovat:</p>
+  <p id="numerot"  style="list-style-type:none"></p>
+  <p id="lkm"></p>
+  <p id="summa"></p>
+  <p id="ka"></p>
+ 
+  <script>
+      var taulukko, numerot, fLen, i;
+      taulukko = [11, 22, 33, 44];
+      fLen = taulukko.length;
+      numerot = "<ul>";
+        for (i = 0; i < fLen; i++) {
+            numerot += "<li> taulukko[" +i + "]  = " + taulukko[i] + "</li>";
+        }
+       "</ul>";
+    
+          document.getElementById("numerot").innerHTML = numerot;
+
+      var lkm = "Lukumäärä on: " + fLen;
+          document.getElementById("lkm").innerHTML =lkm;
+   
+
+      var summa = "Summa on: ";
+ for(var i = 0; i < fLen; i++)
+    document.getElementById("summa").innerHTML =summa;
+  
+  
+     var ka = "Keskiarvo on: " + summa/lkm;
+         document.getElementById("ka").innerHTML =ka;
+   </script> 
+ 
+</body>
+  <script>     
+    console.log(taulukko);
+  </script>
+</html>
